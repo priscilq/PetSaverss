@@ -1,0 +1,116 @@
+h1{
+	font-family: "Titillium Web", sans-serif;
+	text-align:center;
+	border-style: solid;
+	margin: auto;
+	border-radius: 10%;
+	width: 500px;
+
+}
+
+body{
+	background-color: #6dd4f7;
+}
+
+.boton  {
+	width: 100px;
+	margin-left: 10%;
+	margin-top: 8%;
+	display: inline;
+}
+
+button{
+	width: 100px;
+	height: 30px;
+	justify-content: center;
+	margin-top: 2%;
+}
+
+ input{
+ 	background-color: #e2f0fb;
+ 	height: 36px;
+ }
+
+table{
+	background-color: #cef1fc;
+	border-color: black;
+	border-style: solid;
+	padding: 3rem;
+	box-shadow: 3px 3px 3px;
+	border-radius: 10%;
+	text-align: center;
+}
+.barra {
+    width: 100%;
+    padding:0;
+    list-style: none;
+    display:flex;
+    justify-content: space-between;
+    background-color: rgb(94, 198, 224);
+    align-items: center;
+    height: 100px;
+}
+  
+  .barra ul li a {
+    text-decoration: none;
+}
+  .barra ul {
+    list-style: none;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0%;
+    margin-top: 50;
+    display: flex;
+    font-family: 'Nerko One', sans-serif;
+    font-size: 200%;
+    text-transform: uppercase;
+    color: grey;
+  }
+  .barra ul li {
+    padding: 0 .5em .25em;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+  }
+  .barra ul li:hover {
+    color: #fff;
+  }
+  .barra ul li:before {
+    content: "";
+    position: absolute;
+    inset: calc(100% - 3px) 0 0 0; 
+    background: #ffffff;
+    scale: 0 1;
+    transition: .3s, translate 0s .3s;
+  }
+  .barra ul:hover li:before {
+    scale: 1;
+  }
+  .barra ul li:hover:before {
+    translate: 0;
+    transition: .3s;
+  }
+  .barra ul:hover li:has(~ li:hover):before {
+    translate: 100% 0;
+    transition: .2s .2s,scale 0s .4s;
+  }
+  .barra ul:hover li:hover ~ li:before {
+    translate: -100% 0;
+    transition: .2s .2s,scale 0s .4s;
+  }
+
+.logo_encabezado{
+  margin-right: 40%;
+  margin-top: 25%;
+}
+
+.regi{
+	margin-bottom: 3%;
+}
+
+.ini{
+	margin-bottom: 3%;
+	margin-top: 3%;
+}
