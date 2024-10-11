@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Nerko+One&family=Port+Lligat+Sans&display=swap" rel="stylesheet">
+    <title>Perfil PetSaver</title>
+</head>
+<header>
+    <div class ="barra">
+        <div class="container">
+            <aside class='logo_encabezado'> <img src='logo2.png' style="width: 70px">
+        </div>
+            <ul>
+                <li><a title="Sighting" href="avistamiento.html"><b>Avistamiento</b></a></li>
+                <li><a title="About" href="infoindex.html"><b>Sobre nosotros</b></a></li>
+                <li><a title="Info" href="index2.html"><b>Informacion</b></a></li>
+                <li><a title="Contact" href="index2.html"><b>Contacto</b></a></li>
+            </ul>
+    </div>
+</header>
+<body>
+    <div id="miUsuario">
+        <h2>Mi Usuario</h2>
+        <div>
+            <h3>Información Personal</h3>
+            <p>Nombre de Usuario: <span id="userNameDisplay"></span></p>
+            <p>Correo Electrónico: <input type="email" id="userEmail" placeholder="Actualizar correo"></p>
+            <button onclick="updateEmail()">Actualizar Correo</button>
+            <p>Contraseña: <input type="password" id="newPassword" placeholder="Nueva contraseña"></p>
+            <button onclick="updatePassword()">Cambiar Contraseña</button>
+        </div>
+        <div>
+            <h3>Configuración de la Cuenta</h3>
+            <p>Preferencias de Notificaciones: <input type="checkbox" id="notifications"> Recibir Notificaciones</p>
+            <p>Historial de Accesos: <button onclick="viewAccessHistory()">Ver Historial</button></p>
+        </div>
+        <div>
+            <h3>Soporte y Ayuda</h3>
+            <p>Contacto de Soporte: soporte.petsavers@gmail.com</p>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

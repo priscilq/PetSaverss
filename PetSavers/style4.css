@@ -1,0 +1,128 @@
+
+body {
+    font-family: "Titillium Web", sans-serif;
+    background-color: rgb(94, 198, 224);
+    color: #003366;
+    margin: 0;
+    padding: 20px;
+}
+
+#miUsuario {
+    background-color: #e6f2ff;
+    border: 2px solid #003366;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #004080;
+    text-align: center;
+}
+
+h3 {
+    color: #003366;
+    border-bottom: 1px solid #004080;
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #b3d1ff;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+button {
+    background-color: #004080;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0059b3;
+}
+
+#miUsuario div {
+    margin-bottom: 20px;
+}
+
+
+
+.barra {
+    width: 100%;
+    padding:0;
+    list-style: none;
+    display:flex;
+    justify-content: space-between;
+    background-color: rgb(94, 198, 224);
+    align-items: center;
+    height: 100px;
+}
+  
+  .barra ul li a {
+    text-decoration: none;
+}
+  .barra ul {
+    list-style: none;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0%;
+    margin-top: 50;
+    display: flex;
+    font-family: 'Nerko One', sans-serif;
+    font-size: 200%;
+    text-transform: uppercase;
+    color: grey;
+  }
+  .barra ul li {
+    padding: 0 .5em .25em;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+  }
+  .barra ul li:hover {
+    color: #fff;
+  }
+  .barra ul li:before {
+    content: "";
+    position: absolute;
+    inset: calc(100% - 3px) 0 0 0; 
+    background: #ffffff;
+    scale: 0 1;
+    transition: .3s, translate 0s .3s;
+  }
+  .barra ul:hover li:before {
+    scale: 1;
+  }
+  .barra ul li:hover:before {
+    translate: 0;
+    transition: .3s;
+  }
+  .barra ul:hover li:has(~ li:hover):before {
+    translate: 100% 0;
+    transition: .2s .2s,scale 0s .4s;
+  }
+  .barra ul:hover li:hover ~ li:before {
+    translate: -100% 0;
+    transition: .2s .2s,scale 0s .4s;
+  }

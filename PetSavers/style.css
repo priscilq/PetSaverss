@@ -1,0 +1,279 @@
+.barra {
+    width: 100%;
+    padding:0;
+    list-style: none;
+    display:flex;
+    justify-content: space-between;
+    background-color: rgb(94, 198, 224);
+    align-items: center;
+    height: 100px;
+}
+  
+  .barra ul li a {
+    text-decoration: none;
+}
+  .barra ul {
+    list-style: none;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0%;
+    margin-top: 50;
+    display: flex;
+    font-family: 'Nerko One', sans-serif;
+    font-size: 200%;
+    text-transform: uppercase;
+    color: grey;
+  }
+  .barra ul li {
+    padding: 0 .5em .25em;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+  }
+  .barra ul li:hover {
+    color: #fff;
+  }
+  .barra ul li:before {
+    content: "";
+    position: absolute;
+    inset: calc(100% - 3px) 0 0 0; 
+    background: #ffffff;
+    scale: 0 1;
+    transition: .3s, translate 0s .3s;
+  }
+  .barra ul:hover li:before {
+    scale: 1;
+  }
+  .barra ul li:hover:before {
+    translate: 0;
+    transition: .3s;
+  }
+  .barra ul:hover li:has(~ li:hover):before {
+    translate: 100% 0;
+    transition: .2s .2s,scale 0s .4s;
+  }
+  .barra ul:hover li:hover ~ li:before {
+    translate: -100% 0;
+    transition: .2s .2s,scale 0s .4s;
+  }
+
+.logo_encabezado{
+  margin-right: 40%;
+  margin-top: 25%;
+}
+body, html{
+  background-color:#fff;
+  margin: 0%;
+  padding: 0%;
+}
+
+.full-screen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.grid-container {
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  gap: 10px; 
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.Com1, .Com2, .Com3, .Com4, .Com5 {
+  border: 1px solid black;
+  box-sizing: border-box;
+  padding: 10px; 
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: "Port Lligat Sans", sans-serif;
+}
+
+.Com1 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.Com2 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.Com3 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.Com4 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.pets {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pets-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.contact{
+  padding:1%;
+  list-style:none;
+  display:flex;
+  font-family: 'Nerko One', sans-serif;
+  justify-content:space-evenly;
+  background-color: #48b6d8;
+  height: 100px;
+}
+
+  .contact li {
+    margin-right: 8%;
+    margin-left: 8%;
+    display:inline;
+    margin-bottom: -20%;
+    justify-content: space-evenly;
+    font-family: 'Nerko One', sans-serif;
+    color:black;
+    margin-top: 3%;
+
+  }
+
+  .nav {
+    font-family: 'Titillium Web';
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .nav * {
+    box-sizing: border-box;
+    transition: all .35s ease;
+  }
+  
+  .nav li {
+    display: inline;
+    list-style: outside none none;
+    margin: .5em 1em;
+    padding: 0;
+  }
+  
+  .nav a {
+    padding: .5em .8em;
+    color: rgba(255,255,255,.5);
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .nav a::before,
+  .nav a::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+  }
+  
+  .nav a::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid #48b6d8;
+    border-right: 3px solid #48b6d8;
+    transform: translate(-100%, 50%);
+  }
+  
+  .nav a:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid #48b6d8;
+    border-left: 3px solid #48b6d8;
+    transform: translate(100%, -50%)
+  }
+  
+  .nav a:hover:before,
+  .nav a:hover:after{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+  
+  .nav a:hover {
+    color: #03408f;
+  }
+
+a{
+  color: white;
+}
+
+h1{
+  text-align: center;
+}
+
+.sponsor{
+  padding:1%;
+  list-style:none;
+  display:flex;
+  font-family: 'Nerko One', sans-serif;
+  justify-content:space-evenly;
+  background-color: #48b6d8;
+  height: 100px;
+}
+
+  .sponsor li {
+    margin-right: 8%;
+    margin-left: 11%;
+    display:inline;
+  }
+
+#boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    height: auto;
+}
+
+.box {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    text-align: center;
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+  font-family: "Port Lligat Sans", sans-serif;
+}
+
+h1{
+  font-family: 'Nerko One', sans-serif;
+}
+
+a{
+  color: #000;
+}

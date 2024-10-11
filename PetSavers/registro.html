@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetSavers/INICIO DE SESION</title>
+    <link href="style3.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Nerko+One&family=Port+Lligat+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class ="barra">
+            <div class="container">
+                <aside class='logo_encabezado'> <img src='logo2.png' style="width: 70px">
+            </div>
+                <ul>
+                    <li><a title="Home" href="index.html"><b>Informacion</b> </a></li>
+                    <li><a title="About" href="infoindex.html"><b> Sobre nosotros</b>  </a></li>
+                    <li><a title="Contacto" href="#seccion_3"><b> Contacto</b> </a></li>
+                </ul>
+        </div>
+    </header>
+<br>
+    <div>
+        <header>
+            <h1>REGISTRO DE USUARIO</h1>
+        </header>
+        <section>
+            <form id="registerForm">
+                <table align="center">
+                    <tr>
+                        <td class="container">
+                            Usuario
+                            <input type="text" placeholder="Ingrese su usuario" name="usuario" id="username" required>
+                            <br>
+                            Contraseña
+                            <input type="password" placeholder="Ingrese su contraseña" name="contraseña" id="password" required>
+                            <br>
+                            <button class='boton' type="submit">Registrarse</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </div>
+<br>
+    <div>
+        <header>
+            <h1>INICIO DE SESION</h1>
+        </header>
+        <section>
+            <form id="loginForm">
+                <table align="center">
+                    <tr>
+                        <td class="container">
+                            Usuario
+                            <input type="text" placeholder="Ingrese su usuario" name="usuario" id="loginUsername" required>
+                            <br>
+                            Contraseña
+                            <input type="password" placeholder="Ingrese su contraseña" name="contraseña" id="loginPassword" required>
+                            <br>
+                            <button class='boton' onclick="location.href='index2.html'" type="submit">Iniciar sesión</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    <script src="scripts.js"></script>
+</body>
+</html>

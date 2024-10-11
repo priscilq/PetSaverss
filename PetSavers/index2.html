@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Nerko+One&family=Port+Lligat+Sans&display=swap" rel="stylesheet">
+    <title>PetSavers</title>
+    <link rel="icon" href="logo2.png">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Función para confirmar cuando el usuario hace clic en un enlace de contacto
+        function confirmAction(service) {
+            const message = `Estás a punto de ser redirigido a ${service}. ¿Deseas continuar?`;
+            return confirm(message);
+        }
+
+        // Función para un scroll suave a las secciones
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll('a[href^="#"]');
+            for (const link of links) {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute("href"));
+                    target.scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+
+<header>
+    <div class ="barra">
+        <div class="container">
+            <aside class='logo_encabezado'> 
+                <img src='logo2.png' style="width: 70px">
+            </aside>
+        </div>
+        <ul>
+            <li><a title="Home" href="infoindex.html"><b>Sobre Nosotros</b></a></li>
+            <li><a title="About" href="avistamiento.html"><b>Avistamiento</b></a></li>
+            <li><a title="Contact" href="#seccion_3"><b>Contacto</b></a></li>
+            <li><a title="User" href="miusuario.html"><b>Mi Usuario</b></a></li>
+        </ul>
+    </div>
+</header>
+
+<body>
+    <section id="seccion_1" class="full-screen">
+        <div class="grid-container">
+            <div class="Com2">
+                <p>Esta pagina está dedicada a ayudar a los perros y gatos callejeros. Aquí puedes informar sobre los animales que has visto y ayudar a encontrarles un hogar.</p>
+            </div>
+            <div class="Com3">
+                <p>En la sección "Avistamiento" puedes reportar la ubicación de los animales que has visto. Simplemente llena el formulario con la ubicación y otros detalles importantes.</p>
+            </div>
+            <div class="Com4">
+                <p>El formulario te pedirá información sobre el lugar y la descripción del animal. Tu reporte ayudará a otras personas a estar al tanto de los animales en situación de calle.</p>
+            </div>
+            <div class="Com1">
+                <p>Los datos proporcionados se utilizan para coordinar esfuerzos y ayudar a los animales callejeros a encontrar refugio y cuidado. Tu ayuda es invaluable.</p>
+            </div>
+            <div class="pets">
+                <img src="pets.png" class="pets-img">
+            </div>
+            <div class="Com5">
+                <p>Si tienes preguntas o necesitas asistencia, puedes contactarnos a través del formulario de contacto o visitar nuestras redes sociales.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="seccion_2"></section>
+</body>
+
+<footer id="seccion_3">
+    <div class="contact">
+        <h1>CONTACTO</h1>
+    </div>
+    <div class="contact">
+        <ul class="nav">
+            <li>
+                <img src="wsp.png" width="2%">
+                <a href="https://wa.me/5493625490998?text=Hola,%20quisiera%20más%20información%20sobre%20PetSavers" onclick="return confirmAction('WhatsApp');"><b> WhatsApp </b></a>
+            </li>
+            <li>
+                <a><img src="ig.png" width="2%"><b> Instagram</b></a>
+            </li>
+            <li>
+                <img src="fb.png" width="2%">
+                <a href="https://www.facebook.com/profile.php?id=61567174646455" onclick="return confirmAction('Facebook');"><b> Facebook</b></a>
+            </li>
+            <li>
+                <img src="gmail.png" width="2%">
+                <a href="mailto:petsavers.soporte@gmail.com?subject=Consulta&body=Hola, tengo información sobre..." onclick="return confirmAction('Gmail');"><b> Gmail</b></a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<footer>
+    <div class="sponsor">
+        <ul>
+            <li><a><img src="logo1.png" width="10%"></a></li>
+            <li><a><img src="pedigreelogo.png" width="17%"></a></li>
+            <li><a><img src="whiskaslogo.png" width="15%" height="200%"></a></li>      
+        </ul>
+    </div>
+</footer>
+</html>

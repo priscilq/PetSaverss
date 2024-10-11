@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Nerko+One&family=Port+Lligat+Sans&display=swap" rel="stylesheet">
+    <title>PetSavers</title>
+    <link rel="icon" href="logo2.png">
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+        function confirmAction(service) {
+            const message = `Estás a punto de ser redirigido a ${service}. ¿Deseas continuar?`;
+            return confirm(message);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll('a[href^="#"]');
+            for (const link of links) {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute("href"));
+                    target.scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+
+<header>
+    <div class="barra">
+        <div class="container">
+            <aside class='logo_encabezado'>
+                <img src='logo2.png' style="width: 70px">
+            </aside>
+        </div>
+        <ul>
+            <li><a title="Contact" href="#seccion_3"><b>Contacto</b></a></li>
+            <li><a title="User" href="registro.html"><b>Iniciar Sesión</b></a></li>
+        </ul>
+    </div>
+</header>
+
+<body>
+    <section id="seccion_1" class="full-screen">
+        <section id="boxes">
+            <div class="box">
+                <h3 id="ubicacion">Ubicación</h3>
+                <p>PetSavers fue iniciada desde Chaco, Argentina, con el fin de ayudar a los animales callejeros de la zona.</p>
+            </div>
+            <div class="box">
+                <img src="chaco.jpeg" alt="Chaco">
+            </div>
+            <div class="box">
+                <h3 id="sociedad">Sociedad</h3>
+                <p>PetSavers trabaja en conjunto con Pedigree y Whiskas para brindarles apoyo a estos animales y las personas que intentan ayudarlos.</p>
+            </div>
+            <div class="box">
+                <img src="sociedad.jpg" alt="Sociedad">
+            </div>
+            <div class="box">
+                <h3 id="proposito">Propósito</h3>
+                <p>El propósito de este proyecto es disminuir la cantidad de animales callejeros y poder brindarle a la gente de la zona una alternativa para adoptar o mostrar a los animales que necesiten un hogar.</p>
+            </div>
+            <div class="box">
+                <img src="pet1.png" alt="Perro">
+            </div>
+        </section>
+    </section>
+</body>
+
+<footer id="seccion_3">
+    <div class="contact">
+        <h1>CONTACTO</h1>
+    </div>
+    <div class="contact">
+        <ul class="nav">
+            <li>
+                <img src="wsp.png" width="2%">
+                <a href="https://wa.me/5493625490998?text=Hola,%20quisiera%20más%20información%20sobre%20PetSavers" onclick="return confirmAction('WhatsApp');"><b> WhatsApp </b></a>
+            </li>
+            <li>
+                <a><img src="ig.png" width="2%"><b> Instagram</b></a>
+            </li>
+            <li>
+                <img src="fb.png" width="2%">
+                <a href="https://www.facebook.com/profile.php?id=61567174646455" onclick="return confirmAction('Facebook');"><b> Facebook </b></a>
+            </li>
+            <li>
+                <img src="gmail.png" width="2%">
+                <a href="mailto:petsavers.soporte@gmail.com?subject=Consulta&body=Hola, tengo información sobre..." onclick="return confirmAction('Gmail');"><b> Gmail</b></a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<footer>
+    <div class="sponsor">
+        <ul>
+            <li><a><img src="logo1.png" width="10%"></a></li>
+            <li><a><img src="pedigreelogo.png" width="17%"></a></li>
+            <li><a><img src="whiskaslogo.png" width="15%" height="200%"></a></li>
+        </ul>
+    </div>
+</footer>
+</html>
